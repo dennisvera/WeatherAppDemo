@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             guard let data = data else {return}
             do {
                 let weather = try JSONDecoder().decode(Weather.self, from: data)
-                print(weather.list[0])
+                print(weather.list[0].main.temp)
                 
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
