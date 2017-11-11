@@ -15,6 +15,7 @@
 		E1348F6C1FB753370062DB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1348F6A1FB753370062DB22 /* LaunchScreen.storyboard */; };
 		E1348F771FB753370062DB22 /* WeatherAppDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1348F761FB753370062DB22 /* WeatherAppDemoTests.swift */; };
 		E1348F821FB753370062DB22 /* WeatherAppDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1348F811FB753370062DB22 /* WeatherAppDemoUITests.swift */; };
+		E1348F901FB75D110062DB22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1348F8F1FB75D110062DB22 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E1348F7D1FB753370062DB22 /* WeatherAppDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1348F811FB753370062DB22 /* WeatherAppDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppDemoUITests.swift; sourceTree = "<group>"; };
 		E1348F831FB753370062DB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1348F8F1FB75D110062DB22 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				E1348F5E1FB753370062DB22 /* AppDelegate.swift */,
+				E1348F8F1FB75D110062DB22 /* Constants.swift */,
 				E1348F601FB753370062DB22 /* ViewController.swift */,
 				E1348F621FB753370062DB22 /* Main.storyboard */,
 				E1348F681FB753370062DB22 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				E1348F671FB753370062DB22 /* WeatherAppDemo.xcdatamodeld in Sources */,
 				E1348F611FB753370062DB22 /* ViewController.swift in Sources */,
 				E1348F5F1FB753370062DB22 /* AppDelegate.swift in Sources */,
+				E1348F901FB75D110062DB22 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
