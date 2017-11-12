@@ -9,5 +9,5 @@
 import Foundation
 
 struct Constants {
-    let openWeatherAPIKey = "eed0c9c1fc5ed97518d97298e9f009eb"
+//    let weatherAPIKey = "eed0c9c1fc5ed97518d97298e9f009eb"
 }

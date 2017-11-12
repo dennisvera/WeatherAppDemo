@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - OpenWetaherAPI JSON Keys
+
 struct Weather: Decodable {
     let list: [ListKeys]
 }
@@ -26,6 +28,19 @@ struct MainKeys: Decodable {
 }
 
 struct WeatherKeys: Decodable {
+    let main: String
     let description: String
     let icon: String
 }
+
+
+// MARK: - WeatherModel
+
+struct WeatherModel {
+    let description: String
+    let tempAverage: Double
+    let tempMinimum: Double
+    let tempMaximum: Double
+}
+
+
