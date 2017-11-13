@@ -169,6 +169,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UISearchBarD
         return cell
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: 140, height: collectionView.bounds.height)
+    }
+    
 }
 
 
