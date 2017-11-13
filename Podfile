@@ -7,7 +7,9 @@ target 'WeatherAppDemo' do
 
   # Pods for WeatherAppDemo
       pod 'SwiftyJSON'
-      
+      pod 'GooglePlaces'
+      pod 'GooglePlacePicker'
+      pod 'GoogleMaps'
 
   target 'WeatherAppDemoTests' do
     inherit! :search_paths

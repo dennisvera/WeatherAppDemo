@@ -146,13 +146,12 @@
 			isa = PBXGroup;
 			children = (
 				E1348F5E1FB753370062DB22 /* AppDelegate.swift */,
-				E1348F911FB7699E0062DB22 /* models */,
-				E1348F601FB753370062DB22 /* ViewController.swift */,
-				E1348F621FB753370062DB22 /* Main.storyboard */,
-				E1348F681FB753370062DB22 /* Assets.xcassets */,
-				E1348F6A1FB753370062DB22 /* LaunchScreen.storyboard */,
-				E1348F6D1FB753370062DB22 /* Info.plist */,
-				E1348F651FB753370062DB22 /* WeatherAppDemo.xcdatamodeld */,
+				E1C0724D1FBA59A900404765 /* Network */,
+				E1348F911FB7699E0062DB22 /* Models */,
+				E1C072491FBA58B600404765 /* Views */,
+				E1C0724A1FBA58DA00404765 /* Controllers */,
+				E1C0724B1FBA58F000404765 /* UI */,
+				E1C0724C1FBA592500404765 /* Supporting Files */,
 			);
 			path = WeatherAppDemo;
 			sourceTree = "<group>";
@@ -175,14 +174,55 @@
 			path = WeatherAppDemoUITests;
 			sourceTree = "<group>";
 		};
-		E1348F911FB7699E0062DB22 /* models */ = {
+		E1348F911FB7699E0062DB22 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E1348F941FB7C00B0062DB22 /* Weather.swift */,
-				E1348F921FB769EB0062DB22 /* OpenWeatherAPIClient.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1C072491FBA58B600404765 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				E1C072471FB9600E00404765 /* CollectionViewCell.swift */,
 			);
-			path = models;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1C0724A1FBA58DA00404765 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1348F601FB753370062DB22 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1C0724B1FBA58F000404765 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1348F621FB753370062DB22 /* Main.storyboard */,
+				E1348F6A1FB753370062DB22 /* LaunchScreen.storyboard */,
+				E1348F681FB753370062DB22 /* Assets.xcassets */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E1C0724C1FBA592500404765 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1348F6D1FB753370062DB22 /* Info.plist */,
+				E1348F651FB753370062DB22 /* WeatherAppDemo.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1C0724D1FBA59A900404765 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E1348F921FB769EB0062DB22 /* OpenWeatherAPIClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,9 +421,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeatherAppDemo/Pods-WeatherAppDemo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
