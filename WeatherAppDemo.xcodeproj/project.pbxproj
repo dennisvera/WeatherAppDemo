@@ -18,9 +18,9 @@
 		E1348F6C1FB753370062DB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1348F6A1FB753370062DB22 /* LaunchScreen.storyboard */; };
 		E1348F771FB753370062DB22 /* WeatherAppDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1348F761FB753370062DB22 /* WeatherAppDemoTests.swift */; };
 		E1348F821FB753370062DB22 /* WeatherAppDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1348F811FB753370062DB22 /* WeatherAppDemoUITests.swift */; };
-		E1348F901FB75D110062DB22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1348F8F1FB75D110062DB22 /* Constants.swift */; };
 		E1348F931FB769EB0062DB22 /* OpenWeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1348F921FB769EB0062DB22 /* OpenWeatherAPIClient.swift */; };
 		E1348F951FB7C00B0062DB22 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1348F941FB7C00B0062DB22 /* Weather.swift */; };
+		E1C072481FB9600E00404765 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C072471FB9600E00404765 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +62,9 @@
 		E1348F7D1FB753370062DB22 /* WeatherAppDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1348F811FB753370062DB22 /* WeatherAppDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppDemoUITests.swift; sourceTree = "<group>"; };
 		E1348F831FB753370062DB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1348F8F1FB75D110062DB22 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E1348F921FB769EB0062DB22 /* OpenWeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPIClient.swift; sourceTree = "<group>"; };
 		E1348F941FB7C00B0062DB22 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		E1C072471FB9600E00404765 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F252EB1648BFEA849A6F7E77 /* Pods_WeatherAppDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherAppDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F348E4F48F793E7C05A34F08 /* Pods-WeatherAppDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherAppDemoTests/Pods-WeatherAppDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,9 +145,8 @@
 		E1348F5D1FB753370062DB22 /* WeatherAppDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E1348F911FB7699E0062DB22 /* models */,
 				E1348F5E1FB753370062DB22 /* AppDelegate.swift */,
-				E1348F8F1FB75D110062DB22 /* Constants.swift */,
+				E1348F911FB7699E0062DB22 /* models */,
 				E1348F601FB753370062DB22 /* ViewController.swift */,
 				E1348F621FB753370062DB22 /* Main.storyboard */,
 				E1348F681FB753370062DB22 /* Assets.xcassets */,
@@ -181,6 +180,7 @@
 			children = (
 				E1348F941FB7C00B0062DB22 /* Weather.swift */,
 				E1348F921FB769EB0062DB22 /* OpenWeatherAPIClient.swift */,
+				E1C072471FB9600E00404765 /* CollectionViewCell.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -481,9 +481,9 @@
 				E1348F931FB769EB0062DB22 /* OpenWeatherAPIClient.swift in Sources */,
 				E1348F671FB753370062DB22 /* WeatherAppDemo.xcdatamodeld in Sources */,
 				E1348F611FB753370062DB22 /* ViewController.swift in Sources */,
+				E1C072481FB9600E00404765 /* CollectionViewCell.swift in Sources */,
 				E1348F5F1FB753370062DB22 /* AppDelegate.swift in Sources */,
 				E1348F951FB7C00B0062DB22 /* Weather.swift in Sources */,
-				E1348F901FB75D110062DB22 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

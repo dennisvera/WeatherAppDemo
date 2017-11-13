@@ -24,12 +24,6 @@ class OpenWeatherAPIClient {
             if let jsonData = data {
                 let json = JSON(data: jsonData)
                 let list = json["list"]
-//                print(list)
-//                print(json["list"])
-//                print(json["list"][0]["temp"]["max"])
-//                print(json["list"][0]["temp"]["min"])
-//                print(json["list"][0]["weather"][0]["description"])
-//                print(json["list"][0]["weather"][0]["icon"])
                 
                 let weather = Forecast(forecast: list)
                 completionHandler(weather)
