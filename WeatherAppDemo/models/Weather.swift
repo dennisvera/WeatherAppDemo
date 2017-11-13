@@ -7,40 +7,19 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-// MARK: - OpenWetaherAPI JSON Keys
+// MARK: - OpenWeatherAPI JSON Keys
 
-struct Weather: Decodable {
-    let list: [ListKeys]
-}
-
-struct ListKeys: Decodable {
-    let dt: Int
-    let main: MainKeys
-    let weather: [WeatherKeys]
-    let dt_txt: String
-}
-
-struct MainKeys: Decodable {
-    let temp: Double
-    let temp_min: Double
-    let temp_max: Double
-}
-
-struct WeatherKeys: Decodable {
-    let main: String
+struct Weather {
     let description: String
-    let icon: String
+    let minTemperature: String
+    let maxTemperature: String
+    let avgTemperature: String
 }
 
-
-// MARK: - WeatherModel
-
-struct WeatherModel {
-    let description: String
-    let tempAverage: Double
-    let tempMinimum: Double
-    let tempMaximum: Double
+struct Forecast {
+    let forecast: JSON
 }
 
 

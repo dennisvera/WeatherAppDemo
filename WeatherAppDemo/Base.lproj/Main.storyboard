@@ -33,16 +33,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehF-YK-Q1q">
-                                <rect key="frame" x="283" y="144.5" width="76" height="60"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <rect key="frame" x="298.5" y="144.5" width="60.5" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" red="0.1803921568627451" green="0.31764705882352939" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="09d-c" translatesAutoresizingMaskIntoConstraints="NO" id="Ces-Lo-T1z">
-                                <rect key="frame" x="67" y="174.5" width="240" height="240"/>
+                                <rect key="frame" x="57" y="174.5" width="260" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="2cX-WG-tdd"/>
-                                    <constraint firstAttribute="width" constant="240" id="Tdv-Ma-IpV"/>
+                                    <constraint firstAttribute="width" constant="260" id="Tdv-Ma-IpV"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WvR-sB-fQM">
@@ -173,18 +173,18 @@
                         <constraints>
                             <constraint firstItem="CZ0-NF-UTc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="1bU-un-y9W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ehF-YK-Q1q" secondAttribute="trailing" constant="16" id="7pH-t8-Yya"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WvR-sB-fQM" secondAttribute="trailing" constant="71.5" id="AZW-fK-DGj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WvR-sB-fQM" secondAttribute="trailing" constant="71.5" id="AZW-fK-DGj"/>
                             <constraint firstItem="ehF-YK-Q1q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="BFJ-fr-tbA"/>
                             <constraint firstItem="2JZ-6d-lsI" firstAttribute="top" secondItem="WvR-sB-fQM" secondAttribute="bottom" constant="13.5" id="DKG-dv-YNm"/>
                             <constraint firstItem="CZ0-NF-UTc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="FoB-Sr-gth"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ces-Lo-T1z" secondAttribute="trailing" constant="68" id="Hku-Wd-IpV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2JZ-6d-lsI" secondAttribute="trailing" id="NUN-cI-ZtL"/>
                             <constraint firstItem="2JZ-6d-lsI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="THO-WH-3Rb"/>
                             <constraint firstItem="WvR-sB-fQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="WXx-RA-58E"/>
                             <constraint firstItem="Ces-Lo-T1z" firstAttribute="top" secondItem="CZ0-NF-UTc" secondAttribute="bottom" constant="40" id="agv-6W-ShD"/>
                             <constraint firstItem="ehF-YK-Q1q" firstAttribute="top" secondItem="CZ0-NF-UTc" secondAttribute="bottom" constant="10" id="awo-qn-XMc"/>
+                            <constraint firstItem="Ces-Lo-T1z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="e45-aa-0n0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ces-Lo-T1z" secondAttribute="trailing" constant="58" id="eBq-Tw-qX3"/>
                             <constraint firstItem="2JZ-6d-lsI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eQH-Fy-mNO"/>
-                            <constraint firstItem="Ces-Lo-T1z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="fqO-jo-bud"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CZ0-NF-UTc" secondAttribute="trailing" constant="134" id="iwP-xN-Gj3"/>
                             <constraint firstItem="WvR-sB-fQM" firstAttribute="top" secondItem="Ces-Lo-T1z" secondAttribute="bottom" constant="16" id="ogP-mY-GLW"/>
                             <constraint firstItem="CZ0-NF-UTc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yxy-eJ-prK"/>
@@ -192,6 +192,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="17V-a8-pLD"/>
+                    <connections>
+                        <outlet property="averageTempLabel" destination="ehF-YK-Q1q" id="V2b-98-uMm"/>
+                        <outlet property="descriptionLabel" destination="a5Y-94-bHC" id="dmX-HH-Fb8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
