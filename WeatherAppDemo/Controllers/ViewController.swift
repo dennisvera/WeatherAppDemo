@@ -162,7 +162,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, CLLocationMa
         
         return size
     }
-    
 }
 
 // MARK: - Handle the user's selection with GooglePlaces
@@ -176,7 +175,6 @@ extension ViewController: GMSAutocompleteResultsViewControllerDelegate {
         print("Place address: ", place.formattedAddress ?? "")
         
         self.searchController?.searchBar.text = place.name
-        
         getWeatherForecast(with: place.name)
         collectionView.reloadData()
     }
@@ -195,21 +193,5 @@ extension ViewController: GMSAutocompleteResultsViewControllerDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

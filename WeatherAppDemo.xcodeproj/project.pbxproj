@@ -151,6 +151,7 @@
 				E1C072491FBA58B600404765 /* Views */,
 				E1C0724A1FBA58DA00404765 /* Controllers */,
 				E1C0724B1FBA58F000404765 /* UI */,
+				E1348F6D1FB753370062DB22 /* Info.plist */,
 				E1C0724C1FBA592500404765 /* Supporting Files */,
 			);
 			path = WeatherAppDemo;
@@ -211,7 +212,6 @@
 		E1C0724C1FBA592500404765 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E1348F6D1FB753370062DB22 /* Info.plist */,
 				E1348F651FB753370062DB22 /* WeatherAppDemo.xcdatamodeld */,
 			);
 			path = "Supporting Files";
