@@ -13,5 +13,4 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cellDateLabel: UILabel!
     @IBOutlet weak var cellWeatherIconImageView: UIImageView!
     @IBOutlet weak var cellTempLabel: UILabel!
-    
 }
