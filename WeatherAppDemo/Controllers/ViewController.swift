@@ -26,7 +26,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CLLocationMa
     var searchController: UISearchController?
     
     let weatherAPI = OpenWeatherAPIClient()
-    var weatherJSON: JSON!
+    var weatherJSON: JSON?
     var weatherTemp: Int?
     
     let myCity = "Brooklyn"
@@ -76,10 +76,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, CLLocationMa
         let calendar = NSCalendar.current
         let components = calendar.dateComponents([.month, .day, .year], from: tomorrow! as Date)
         
-        let year =  components.year
         let month = components.month
         let day = components.day
-        let dateArranged = "\(month!)-\(day!)-\(year!)"
+        let year =  components.year
+        let dateArranged = "\(month ?? 0)-\(day ?? 0)-\(year ?? 0)"
         return dateArranged
     }
     
@@ -99,7 +99,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CLLocationMa
         }
     }
     
-    // MARK: - Searchcontroller Delegates & searchBar setup
+    // MARK: - SearchController / SearchBar setup
     
     func searchField() {
         resultsViewController = GMSAutocompleteResultsViewController()
@@ -124,7 +124,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CLLocationMa
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchController?.searchBar.placeholder = "Enter city..."
     }
-
+    
     
     // MARK: UICollectionViewDataSource
     
@@ -144,12 +144,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, CLLocationMa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         
         if weatherTemp != nil {
-            let averageTemperature = weatherJSON[indexPath.row]["main"]["temp"].intValue
-            let weatherIconImageView = weatherJSON[indexPath.row]["weather"][0]["icon"].stringValue
-            
-            cell.cellDateLabel.text = getDayOfWeek(getDates(value: indexPath.row))
-            cell.cellWeatherIconImageView.image = UIImage(named: "\(weatherIconImageView)-r")
-            cell.cellTempLabel.text = "\(averageTemperature)°"
+            if let json = weatherJSON {
+                let averageTemperature = json[indexPath.row]["main"]["temp"].intValue
+                let weatherIconImageView = json[indexPath.row]["weather"][0]["icon"].stringValue
+                
+                cell.cellDateLabel.text = getDayOfWeek(getDates(value: indexPath.row))
+                cell.cellWeatherIconImageView.image = UIImage(named: "\(weatherIconImageView)-r")
+                cell.cellTempLabel.text = "\(averageTemperature)°"
+            }
         }
         
         return cell
@@ -170,7 +172,7 @@ extension ViewController: GMSAutocompleteResultsViewControllerDelegate {
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController, didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
-
+        
         print("Place name: ", place.name)
         print("Place address: ", place.formattedAddress ?? "")
         
