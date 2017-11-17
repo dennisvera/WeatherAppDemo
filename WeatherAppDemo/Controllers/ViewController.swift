@@ -83,7 +83,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CLLocationMa
         return dateArranged
     }
     
-    func getDayOfWeek(_ today:String) -> String? {
+    func getDayOfWeek(_ today: String) -> String? {
         let weekdays = [1:"SUN", 2:"MON", 3:"TUE", 4:"WED", 5:"THU", 6:"FRI", 7:"SAT"]
         
         let formatter  = DateFormatter()
